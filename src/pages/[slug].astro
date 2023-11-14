@@ -5,7 +5,7 @@ import CardAbout from "../components/CardAbout.astro";
 export async function getStaticPaths() {
     const posts = await Astro.glob('../posts/*.md');
 
-    return posts.map(post => ({
+    return posts.map((post: { frontmatter: { slug: any; }; }) => ({
         params: {
             slug: post.frontmatter.slug
         },
