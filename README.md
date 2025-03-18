@@ -1,40 +1,37 @@
-# Astro Starter Kit: Basics
+# Personal Website Built with Astro
 
-```
-npm create astro@latest -- --template basics
-```
+A modern, fast, and responsive personal website built using Astro framework. View the live site at [flourishing-custard-f44c62.netlify.app](https://flourishing-custard-f44c62.netlify.app/).
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f44c62/deploy-status)](https://flourishing-custard-f44c62.netlify.app/)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## About
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+This website is built using Astro, a modern static site generator that delivers lightning-fast performance. It uses React components for interactive elements while maintaining the benefits of static site generation.
 
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+The project is organized with the following structure:
 
 ```
 /
 ├── public/
-│   └── favicon.svg
+│   └── static assets
 ├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   ├── components/     # Reusable Astro and React components
+│   ├── images/        # Image assets
+│   ├── layouts/       # Page layouts
+│   ├── pages/         # Route pages
+│   ├── posts/         # Blog post content
+│   └── styles/        # Global styles
+├── astro.config.mjs   # Astro configuration
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
+- `src/components/`: Contains reusable UI components built with Astro and React
+- `src/pages/`: Defines the routing structure of the website
+- `src/posts/`: Contains blog post content in markdown format
+- `src/styles/`: Global CSS styles and theme definitions
 
 ## 🧞 Commands
 
@@ -49,6 +46,18 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 🔧 Tech Stack
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- [Astro](https://astro.build) - Static Site Generator
+- [React](https://reactjs.org) - UI Components
+- [TypeScript](https://www.typescriptlang.org/) - Type Safety
+- [Netlify](https://www.netlify.com/) - Hosting and Deployment
+
+## 📝 License
+
+This project is open source and available under the MIT License.
+
+## 🔗 Links
+
+- [GitHub Repository](https://github.com/Konstantine1307/astro-website)
+- [Live Site](https://flourishing-custard-f44c62.netlify.app/)
