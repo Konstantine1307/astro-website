@@ -2,6 +2,8 @@
 	"name": "helpless-chasm",
 	"type": "module",
 	"version": "0.0.1",
+	"url": "https://flourishing-custard-f44c62.netlify.app/",
+	"github": "https://github.com/Konstantine1307/astro-website",
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
@@ -11,9 +13,9 @@
 	},
 	"dependencies": {
 		"@astrojs/react": "^3.6.2",
-		"@types/react": "^18.3.10",
-		"@types/react-dom": "^18.0.11",
-		"astro": "^4.15.10",
+		"@types/react": "^18.3.12",
+		"@types/react-dom": "^18.3.1",
+		"astro": "^4.16.18",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	}
