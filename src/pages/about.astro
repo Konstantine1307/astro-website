@@ -1,12 +1,14 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import CardAbout from '../components/CardAbout.astro';
-
-import logos from '../images/deploy-logos.png'
-import logosSmall from '../images/deploy-logos-small.png'
+import Showcase from '../components/Showcase.astro';
+import logos from '../images/deploy-logos.png';
+import logosSmall from '../images/deploy-logos-small.png';
 ---
 
 <Layout title="About Astro">
+  <Showcase heading='About the Astro blog'/>
   <section class="page-content">
     <div class="container">
       <h2>About Astro</h2>
@@ -26,7 +28,7 @@ import logosSmall from '../images/deploy-logos-small.png'
         impedit.
       </p>
 
-      <CardAbout dark = {true}>
+      <CardAbout dark={true}>
         <h3>Use the tools you already love</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum
@@ -36,11 +38,11 @@ import logosSmall from '../images/deploy-logos-small.png'
           laborum impedit nesciunt ut voluptatum assumenda aspernatur libero
           iusto error molestias dolorum, necessitatibus labore?
         </p>
-        </CardAbout>
+      </CardAbout>
 
       <h3>Deploy to anywhere, even the edge</h3>
-      <img class="logos" src={logos} alt="" />
-      <img class="logos-small" src={logosSmall} alt="" />
+      <Image src={logos} alt="" class="logos"/>
+      <Image src={logosSmall} alt="" class="logos-small" />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde doloribus,
         vel ipsum mollitia aliquid cumque commodi corrupti omnis ipsam sit

@@ -1,15 +1,15 @@
 ---
-import logos from '../images/framework-logos.png';
-import logosSmall from '../images/framework-logos-small.png';
+import logos from '../images/framework-logos.png?url';
+import logosSmall from '../images/framework-logos-small.png?url';
 
 export interface Props {
-  heading?: string,
-  text?: string,
-  showExtra?: boolean,
+  heading?: string;
+  text?: string;
+  showExtra?: boolean;
 }
 
 const {
-  heading = 'Welcome To The Astro Crash Course!',
+  heading,
   text = ' Build super fast HTML-first websites using your favorite JavaScript frameworks',
   showExtra = false,
 } = Astro.props as Props;
@@ -23,17 +23,22 @@ const {
     </p>
   </div>
 
-  {showExtra && <> 
-     <div class="showcase-img">
-    <img class="logos" src={`${logos}`} alt="" />
-    <img class="logos-small" src={`${logosSmall}`} alt="" />
-  </div>
+  {
+    showExtra && (
+      <>
+        <div class="showcase-img">
+          <img class="logos" src={`${logos}`} alt="" />
+          <img class="logos-small" src={`${logosSmall}`} alt="" />
+        </div>
 
-  <p class="showcase-demo">
-    <small>This is a demo website used for the YouTube crash course.</small>
-  </p>
-  </>}
- 
+        <p class="showcase-demo">
+          <small>
+            This is a demo website used for the YouTube crash course.
+          </small>
+        </p>
+      </>
+    )
+  }
 </section>
 
 <style>
