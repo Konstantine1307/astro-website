@@ -1,22 +1,22 @@
 {
-	"name": "helpless-chasm",
-	"type": "module",
-	"version": "0.0.1",
-	"url": "https://flourishing-custard-f44c62.netlify.app/",
-	"github": "https://github.com/Konstantine1307/astro-website",
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro"
-	},
-	"dependencies": {
-		"@astrojs/react": "^3.6.2",
-		"@types/react": "^18.3.12",
-		"@types/react-dom": "^18.3.1",
-		"astro": "^4.16.18",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
-	}
+    "name": "helpless-chasm",
+    "type": "module",
+    "version": "0.0.1",
+    "url": "https://flourishing-custard-f44c62.netlify.app/",
+    "github": "https://github.com/Konstantine1307/astro-website",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/react": "^4.4.2",
+        "@types/react": "^19.2.7",
+        "@types/react-dom": "^19.2.3",
+        "astro": "^5.16.5",
+        "react": "^19.2.1",
+        "react-dom": "^19.2.1"
+    }
 }
