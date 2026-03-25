@@ -1,8 +1,8 @@
 # Personal Website Built with Astro
 
-A modern, fast, and responsive personal website built using Astro framework. View the live site at [flourishing-custard-f44c62.netlify.app](https://flourishing-custard-f44c62.netlify.app/).
+A modern, fast, and responsive personal website built using Astro framework. View the live site at [astro-website-bt-1.netlify.app](https://astro-website-bt-1.netlify.app/).
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f44c62/deploy-status)](https://flourishing-custard-f44c62.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f44c62/deploy-status)](https://astro-website-bt-1.netlify.app/)
 
 ## About
 
@@ -60,4 +60,4 @@ This project is open source and available under the MIT License.
 ## 🔗 Links
 
 - [GitHub Repository](https://github.com/Konstantine1307/astro-website)
-- [Live Site](https://flourishing-custard-f44c62.netlify.app/)
+- [Live Site](https://astro-website-bt-1.netlify.app/)
