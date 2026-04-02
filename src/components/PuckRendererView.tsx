@@ -2,7 +2,7 @@ import type { CSSProperties, FC, ReactNode } from 'react';
 import type { PuckData } from '../lib/puck-data';
 // import styles from './PuckRendererView.module.css';
 import '../styles/global.css';
-import '@ui/styles/showcase.css';
+import '../styles/showcase.css';
 
 interface Block {
   type?: string;
