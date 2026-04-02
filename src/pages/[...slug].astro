@@ -1,56 +1,40 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import CardAbout from '../components/CardAbout.astro';
+import PuckRendererView from '../components/PuckRendererView';
+import { getPageData as getLocalPageData } from '../lib/puck-data';
 
-export async function getStaticPaths() {
-  const posts = Object.values(
-    import.meta.glob('../posts/*.md', { eager: true }),
-  ) as Array<{
-    frontmatter: {
-      slug: string;
-      title: string;
-      author: string;
-      date: string;
-      excerpt: string;
-    };
-    Content: any;
-    url: string;
-  }>;
+export const prerender = false;
 
-  return posts.map((post) => ({
-    params: {
-      slug: post.frontmatter.slug,
-    },
-    props: {
-      post,
-    },
-  }));
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+const normalizedPath = pathname.startsWith('/') ? pathname : `/${pathname}`;
+
+let pageData = null;
+
+if (import.meta.env.DEV) {
+  pageData = await getLocalPageData(normalizedPath);
+} else {
+  const baseEndpoint =
+    import.meta.env.PUBLIC_PUCK_ENDPOINT ||
+    `${Astro.site?.origin ?? ''}/.netlify/functions/puck-page`;
+
+  const response = await fetch(`${baseEndpoint}${normalizedPath}`);
+  if (response.ok) {
+    pageData = await response.json();
+  }
 }
 
-const { Content, frontmatter } = Astro.props.post as {
-  Content: any;
-  frontmatter: {
-    title: string;
-    author: string;
-    date: string;
-    excerpt: string;
-  };
-};
+if (!pageData) {
+  return Astro.redirect('/404', 302);
+}
+
+const pageTitle =
+  pageData.root?.props?.title || normalizedPath.replace('/', '') || 'Page';
 ---
 
-<Layout title={frontmatter.title}>
-  <section class='page-content'>
+<Layout title={pageTitle}>
+  <main class='page-content'>
     <div class='container'>
-      <CardAbout>
-        <a class='btn' href='/blog'>Go Back</a>
-        <h2>{frontmatter.title}</h2>
-        <div>
-          Written by <strong>{frontmatter.author}</strong> on {
-            new Date(frontmatter.date).toLocaleDateString('es')
-          }
-        </div>
-        <Content />
-      </CardAbout>
+      <PuckRendererView data={pageData} />
     </div>
-  </section>
+  </main>
 </Layout>

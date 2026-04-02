@@ -1,0 +1,16 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  padding: number;
+}
+
+const { title, description, padding } = Astro.props;
+---
+
+<div style={`padding: ${padding}px; border: 1px solid #ccc;`}>
+  <h2 style="margin-bottom: 2px;">{title}</h2>
+  <p style="background-color: #f0f0f0; line-height: 1.6;">
+    {description}
+  </p>
+</div>

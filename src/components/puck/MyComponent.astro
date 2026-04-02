@@ -1,0 +1,15 @@
+---
+interface Props {
+  drink: string;
+  waterType?: string;
+}
+
+const { drink, waterType } = Astro.props;
+---
+
+<div style="padding: 16px; border: 1px solid #ddd;">
+  <h3>Drink: {drink === 'orange-juice' ? 'Orange Juice' : drink}</h3>
+  {drink === 'water' && waterType && (
+    <p>Water Type: {waterType === 'sparkling' ? 'Sparkling' : 'Still'}</p>
+  )}
+</div>

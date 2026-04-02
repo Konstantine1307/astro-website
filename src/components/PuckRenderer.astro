@@ -1,0 +1,13 @@
+---
+import { getPageData } from '../lib/puck-data';
+import PuckRendererView from './PuckRendererView';
+
+interface Props {
+  path?: string;
+}
+
+const { path = '/' } = Astro.props;
+const pageData = await getPageData(path);
+---
+
+<PuckRendererView data={pageData} />

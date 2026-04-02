@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PuckRenderer from '../components/PuckRenderer.astro';
+import { getPageData } from '../lib/puck-data';
+
+const pageData = await getPageData('/');
+const pageTitle = pageData?.root?.props?.title || 'Puck Powered Page';
+---
+
+<Layout title={pageTitle}>
+  <main>
+    <PuckRenderer path="/" />
+  </main>
+</Layout>

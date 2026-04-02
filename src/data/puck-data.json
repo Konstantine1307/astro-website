@@ -1,0 +1,145 @@
+{
+  "/": {
+    "root": {
+      "props": {
+        "title": "Puck + React Router 7 demo"
+      }
+    },
+    "content": [
+      {
+        "type": "HeadingBlock",
+        "props": {
+          "title": "Edit this page by adding /edit to the end of the URL",
+          "id": "HeadingBlock-1694032984497"
+        }
+      },
+      {
+        "type": "GridBlock",
+        "props": {
+          "content": [
+            {
+              "type": "HeadingBlock",
+              "props": {
+                "title": "Heading",
+                "id": "HeadingBlock-685d3e10-0195-4845-87fc-2b8f203c85df"
+              }
+            },
+            {
+              "type": "Card",
+              "props": {
+                "id": "Card-7864c314-0167-483a-8e20-9106e4f71cd8",
+                "title": "Card 1",
+                "description": "Description for card 1 a;jkhfd;kjas;dkfjj;akjsdf;kajsdf;kjas;dkfj;aksdjf;kasdfj;kasjdhf;kahjdsf;khjasd;fjh;aksdfhj"
+              }
+            },
+            {
+              "type": "Card",
+              "props": {
+                "id": "Card-eaac5a2b-890f-4cbb-ac31-b1bdbf5c6ec6",
+                "title": "Card 2",
+                "description": "Description for card 2"
+              }
+            }
+          ],
+          "id": "GridBlock-e5cbdd2d-f4a1-416c-b3d5-4b06e5156133"
+        }
+      },
+      {
+        "type": "MyComponent",
+        "props": {
+          "drink": "orange-juice",
+          "id": "MyComponent-0e9a29a4-480c-488e-8501-0fcb8cc32de8",
+          "waterType": "still"
+        }
+      },
+      {
+        "type": "FixedColumnBlock",
+        "props": {
+          "rightColumn": [],
+          "leftColumn": [],
+          "id": "FixedColumnBlock-bea9ea5b-b37d-4f8d-b242-3a1311f865c9"
+        }
+      },
+      {
+        "type": "GridBlock",
+        "props": {
+          "content": [
+            {
+              "type": "CardBlock",
+              "props": {
+                "title": "Card Tile",
+                "description": "Description for card",
+                "padding": 16,
+                "id": "CardBlock-5a2ab441-312d-4135-8c89-d44848a73200",
+                "bgColor": "yellow-100",
+                "variant": "shadow-md"
+              }
+            },
+            {
+              "type": "CardBlock",
+              "props": {
+                "title": "Card Tile",
+                "description": "Description for card",
+                "padding": 16,
+                "id": "CardBlock-72511cb8-d7fd-4c89-be50-c9095351f791",
+                "variant": "shadow-md",
+                "bgColor": "red-300"
+              }
+            },
+            {
+              "type": "CardBlock",
+              "props": {
+                "title": "Card Tile",
+                "description": "Description for card",
+                "padding": 16,
+                "id": "CardBlock-926a5781-ac27-4ac4-8442-931450baea39",
+                "bgColor": "yellow-100",
+                "variant": "shadow-md"
+              }
+            }
+          ],
+          "id": "GridBlock-8e294fbc-e326-4be9-a7cb-b3bcec192ac3"
+        }
+      }
+    ],
+    "zones": {}
+  },
+  "/hello-world": {
+    "root": {
+      "props": {
+        "title": ""
+      }
+    },
+    "content": [
+      {
+        "type": "ShowcaseBlock",
+        "props": {
+          "heading": "Welcome To The Astro Crash Course!",
+          "text": "Build super fast HTML-first websites using your favorite JavaScript frameworks.",
+          "showExtra": "true",
+          "id": "ShowcaseBlock-cfb295aa-a429-4e32-bc14-2410c054a232"
+        }
+      },
+      {
+        "type": "CardBlock",
+        "props": {
+          "title": "Card Tile",
+          "description": "Description for card",
+          "padding": 16,
+          "variant": "border rounded-md",
+          "bgColor": "inherit",
+          "id": "CardBlock-a7932472-9890-4085-8c7c-3c6287630e64"
+        }
+      },
+      {
+        "type": "FixedColumnBlock",
+        "props": {
+          "rightColumn": [],
+          "leftColumn": [],
+          "id": "FixedColumnBlock-60e86c1f-1b19-4467-b396-b9212066bf47"
+        }
+      }
+    ],
+    "zones": {}
+  }
+}
