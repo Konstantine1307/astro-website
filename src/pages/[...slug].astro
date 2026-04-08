@@ -1,34 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PuckRendererView from '../components/PuckRendererView';
-import { getPageData as getLocalPageData } from '../lib/puck-data';
+import { getAllPuckPages } from '../lib/puck-data';
+import type { PuckData } from '../lib/puck-data';
 
-export const prerender = false;
+export const prerender = true;
 
-const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
-const normalizedPath = pathname.startsWith('/') ? pathname : `/${pathname}`;
+export async function getStaticPaths() {
+  const pages = await getAllPuckPages();
 
-let pageData = null;
+  return Object.entries(pages).map(([path, pageData]) => {
+    const normalizedPath = path || '/';
+    const slug =
+      normalizedPath === '/'
+        ? []
+        : normalizedPath.replace(/^\//, '').split('/');
 
-if (import.meta.env.DEV) {
-  pageData = await getLocalPageData(normalizedPath);
-} else {
-  const baseEndpoint =
-    import.meta.env.PUBLIC_PUCK_ENDPOINT ||
-    `${Astro.site?.origin ?? ''}/.netlify/functions/puck-page`;
-
-  const response = await fetch(`${baseEndpoint}${normalizedPath}`);
-  if (response.ok) {
-    pageData = await response.json();
-  }
+    return {
+      params: { slug },
+      props: {
+        pageData,
+        normalizedPath,
+      },
+    };
+  });
 }
 
-if (!pageData) {
-  return Astro.redirect('/404', 302);
-}
+const { pageData, normalizedPath } = Astro.props as {
+  pageData: PuckData;
+  normalizedPath: string;
+};
 
 const pageTitle =
-  pageData.root?.props?.title || normalizedPath.replace('/', '') || 'Page';
+  pageData?.root?.props?.title || normalizedPath.replace('/', '') || 'Page';
 ---
 
 <Layout title={pageTitle}>

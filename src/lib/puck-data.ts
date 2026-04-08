@@ -19,6 +19,15 @@ async function readPuckFile() {
   return JSON.parse(file) as PuckPages;
 }
 
+export async function getAllPuckPages(): Promise<PuckPages> {
+  try {
+    return await readPuckFile();
+  } catch (error) {
+    console.error('Error loading all Puck pages:', error);
+    return {};
+  }
+}
+
 export async function getPuckData(Astro: AstroGlobal): Promise<PuckPages> {
   try {
     return await readPuckFile();
