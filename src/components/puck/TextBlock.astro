@@ -1,0 +1,35 @@
+---
+interface TextProps {
+  text: string;
+  size: 's' | 'm' | 'l';
+  align: 'left' | 'center' | 'right';
+  color: 'default' | 'grey';
+  maxWidth: number;
+  padding: number;
+}
+
+const { text, size, align, color, maxWidth, padding } = Astro.props as TextProps;
+---
+
+<div style={`max-width: ${maxWidth}px; padding: ${padding}px;`}>
+  <span style={{
+    color: color === 'default' ? 'inherit' : 'var(--color-grey-05)',
+    display: 'flex',
+    textAlign: align,
+    width: '100%',
+    fontSize: size === 'm' ? '20px' 
+    : size === 'l' ? '36px' 
+    : '16px',
+    fontWeight: 400,
+    maxWidth,
+    justifyContent:
+      align === 'center'
+        ? 'center'
+        : align === 'right'
+          ? 'flex-end'
+          : 'flex-start',
+  }}>
+    {text}
+  </span>
+</div>
+
