@@ -12,15 +12,18 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^5.0.5",
+    "@astrojs/react": "^5.0.7",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "astro": "^6.3.5",
+    "astro": "^6.4.6",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   },
   "devDependencies": {
     "@types/node": "^20.19.41",
-    "vite": "^7.3.3"
+    "vite": "^8.0.16"
+  },
+  "overrides": {
+    "esbuild": "^0.25.0"
   }
 }
