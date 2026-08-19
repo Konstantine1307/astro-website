@@ -13,10 +13,10 @@
     "fresh": "rm -rf node_modules package-lock.json && npm install"
   },
   "dependencies": {
-    "@astrojs/react": "^5.0.7",
+    "@astrojs/react": "^6.0.3",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "astro": "^7.1.6",
+    "astro": "^7.2.3",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   },
