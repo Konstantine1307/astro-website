@@ -1,0 +1,3 @@
+[build]
+  # Skip builds for Dependabot branches (exit 0 = skip, non-zero = build)
+  ignore = "echo $BRANCH | grep -q '^dependabot/'"
